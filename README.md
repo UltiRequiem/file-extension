@@ -13,8 +13,8 @@ You can get this package by [nest.land](https://nest.land/package/get_file_exten
 ## Usage
 
 This package exposes two Functions,
-[sum](https://github.com/UltiRequiem/deno-get-file-extension/blob/main/mod.ts#L1) and
-[sumSync](https://github.com/UltiRequiem/deno-get-file-extension/blob/main/mod.ts#L5).
+[getFileExtension](https://github.com/UltiRequiem/deno-get-file-extension/blob/main/mod.ts#L1) and
+[getFileExtensionSync](https://github.com/UltiRequiem/deno-get-file-extension/blob/main/mod.ts#L5).
 
 ```typescript
 import getFileExtension, { getFileExtensionSync } from "https://deno.land/x/get_file_extension/mod.ts";
@@ -34,5 +34,5 @@ console.log(getFileExtensionSync("egg.json")); // "json"
 
 ### License
 
-[This project](https://deno.land/x/get-file-extension) is licensed under the
+[This project](https://deno.land/x/get_file_extension) is licensed under the
 [MIT License](./LICENSE.md).
