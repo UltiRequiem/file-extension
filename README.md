@@ -1,4 +1,4 @@
-# get-file-extension for Deno
+# Get File Extension
 
 [![GitMoji](https://img.shields.io/badge/Gitmoji-%F0%9F%8E%A8%20-FFDD67.svg)](https://gitmoji.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -7,8 +7,8 @@
 ![Lint](https://github.com/UltiRequiem/deno-get-file-extension/workflows/Lint/badge.svg)
 ![Test](https://github.com/UltiRequiem/deno-get-file-extension/workflows/Tests/badge.svg)
 
-You can get this package by [nest.land](https://nest.land/package/get-file-extension),
-[deno.land](https://deno.land/x/get-file-extension) or [denopkg](https://denopkg.com/UltiRequiem/deno-get-file-extension/mod.ts).
+You can get this package by [nest.land](https://nest.land/package/get_file_extension),
+[deno.land](https://deno.land/x/get_file_extension) or [denopkg](https://denopkg.com/UltiRequiem/deno-get-file-extension/mod.ts).
 
 ## Usage
 
@@ -17,7 +17,7 @@ This package exposes two Functions,
 [sumSync](https://github.com/UltiRequiem/deno-get-file-extension/blob/main/mod.ts#L5).
 
 ```typescript
-import getFileExtension, { getFileExtensionSync } from "https://deno.land/x/getFileExtension/mod.ts";
+import getFileExtension, { getFileExtensionSync } from "https://deno.land/x/get_file_extension/mod.ts";
 
 console.log(await getFileExtension("test.py")); // "py"
 
