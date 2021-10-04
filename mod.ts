@@ -1,7 +1,7 @@
-export default function template() {
-  return Promise.resolve(templateSync());
+export default function getFileExtension(fname: string) {
+  return Promise.resolve(getFileExtensionSync(fname));
 }
 
-export function templateSync() {
-  return "Template";
+export function getFileExtensionSync(fname: string) {
+  return fname.slice((fname.lastIndexOf(".") - 1 >>> 0) + 2);
 }
