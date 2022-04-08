@@ -1,11 +1,7 @@
-import { assertEquals } from "./test_deps.ts";
+import { assertEquals } from "https://deno.land/std@0.109.0/testing/asserts.ts";
 
-import getFileExtension, { getFileExtensionSync } from "./mod.ts";
+import { fileExtension } from "./mod.ts";
 
-Deno.test("Test Default Exports", async () => {
-  assertEquals(await getFileExtension("test.py"), "py");
-});
-
-Deno.test("Test getFileExtensionSync", () => {
-  assertEquals(getFileExtensionSync("test.rs"), "rs");
+Deno.test("Test Default Exports", () => {
+  assertEquals(fileExtension("test.py"), "py");
 });
