@@ -1,6 +1,9 @@
 # Get File Extension
 
-Get a file extension.
+[![Code Coverage](https://codecov.io/gh/ultirequiem/filex_extension/branch/main/graph/badge.svg)](https://codecov.io/gh/ultirequiem/filex_extension)
+[![Deno Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/filex_extension/mod.ts)
+
+Get the extension of a file.
 
 ## Usage
 
