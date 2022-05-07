@@ -14,7 +14,7 @@ The API is the same on all this platforms ✔️
 ```javascript
 import { fileExtension } from "https://deno.land/x/file_extension/mod.ts";
 
-fileExtension("main.py"); // py
+fileExtension("main.py"); // .py
 ```
 
 ### [Node.js 🐢🚀](https://npmjs.com/package/@ultirequiem/file-extension)
