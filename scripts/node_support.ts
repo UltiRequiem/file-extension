@@ -6,6 +6,6 @@ buildPackage(
     description: "Get the file extension of a file.",
     homepage: "https://file-extension.js.org",
     keywords: ["extension", "file"],
-    version: "2.0.0",
+    version: "3.0.0",
   },
 );

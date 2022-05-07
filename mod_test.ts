@@ -1,7 +1,7 @@
 import {
 	assertEquals,
 	assertThrows,
-} from "https://deno.land/std@0.137.0/testing/asserts.ts";
+} from "https://deno.land/std@0.138.0/testing/asserts.ts";
 
 import { extname } from "./mod.ts";
 
