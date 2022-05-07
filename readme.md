@@ -12,15 +12,19 @@ The API is the same on all this platforms ✔️
 ### [Deno 🦕](https://deno.land/x/file_extension)
 
 ```javascript
-import { fileExtension } from "https://deno.land/x/file_extension/mod.ts";
+import { extname } from "https://deno.land/x/file_extension/mod.ts";
 
-fileExtension("main.py"); // .py
+extname("main.py"); // .py
+
+extname({ path: "App.js", leadingPeriod: true }); // .js
+
+extname({ path: "mod.ts", leadingPeriod: false }); // ts
 ```
 
 ### [Node.js 🐢🚀](https://npmjs.com/package/@ultirequiem/file-extension)
 
 ```javascript
-import { fileExtension } from "@ultirequiem/file-extension";
+import { extname } from "@ultirequiem/file-extension";
 ```
 
 ### [Browser 🌐](https://developer.mozilla.org/en-US/docs/Glossary/Browser)
