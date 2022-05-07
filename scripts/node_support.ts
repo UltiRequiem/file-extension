@@ -4,7 +4,7 @@ buildPackage(
   {
     repoName: "file_extension",
     description: "Get the file extension of a file.",
-    homepage: "https://camelcase.js.org",
+    homepage: "https://file-extension.js.org",
     keywords: ["extension", "file"],
     version: "2.0.0",
   },
