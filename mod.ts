@@ -10,6 +10,15 @@ export interface Config {
 }
 
 /**
+ * @private
+ */
+export function _parsePath(path: Config | string): Config {
+  const isSimplePath = typeof path === "string";
+
+  return isSimplePath ? { path, leadingPeriod: true } : path;
+}
+
+/**
  * Return the extension of the "file" with leading period.
  *
  * Works on Deno, Node.js and the browser.
@@ -21,9 +30,7 @@ export interface Config {
  * @returns extension (ex. for "main.py" returns ".py")
  */
 export function unixExtname(path: string | Config) {
-  const isSimplePath = typeof path === "string";
-
-  const config = isSimplePath ? { path, leadingPeriod: true } : path;
+  const config = _parsePath(path);
 
   let startDot = -1;
   let startPart = 0;
