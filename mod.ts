@@ -4,6 +4,11 @@
  * @module
  */
 
+export interface Config {
+	path: string;
+	leadingPeriod?: boolean;
+}
+
 /**
  * Return the extension of the "file" with leading period.
  *
@@ -12,10 +17,14 @@
  * Only Deno? {@link https://deno.land/std/path#extname}
  * Only Node.js? {@link https://nodejs.org/api/path.html#pathextnamepath}
  *
- * @param file with extension.
+ * @param path with extension.
  * @returns extension (ex. for "main.py" returns ".py")
  */
-export function unixExtname(file: string) {
+export function unixExtname(path: string | Config) {
+	const isSimplePath = typeof path === "string";
+
+	const config = isSimplePath ? { path, leadingPeriod: true } : path;
+
 	let startDot = -1;
 	let startPart = 0;
 	let end = -1;
@@ -25,8 +34,8 @@ export function unixExtname(file: string) {
 	// after any path separator we find
 	let preDotState = 0;
 
-	for (let i = file.length - 1; i >= 0; --i) {
-		const code = file.charCodeAt(i);
+	for (let i = config.path.length - 1; i >= 0; --i) {
+		const code = config.path.charCodeAt(i);
 
 		if (code === 47) {
 			// If we reached a path separator that was not part of a set of path
@@ -68,10 +77,12 @@ export function unixExtname(file: string) {
 		// The (right-most) trimmed path component is exactly '..'
 		(preDotState === 1 && startDot === end - 1 && startDot === startPart + 1)
 	) {
-		throw new Error(`Path ${file} does not have a valid extension.`);
+		throw new Error(`Path ${path} does not have a valid extension.`);
 	}
 
-	return file.slice(startDot, end);
+	!config.leadingPeriod && startDot++;
+
+	return config.path.slice(startDot, end);
 }
 
 export const extname = unixExtname;
