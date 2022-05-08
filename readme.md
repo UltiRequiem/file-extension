@@ -5,6 +5,9 @@
 
 Get the extension of a file.
 
+> Ported from [Browserify](Ported from
+> https://github.com/browserify/path-browserify) ❤
+
 ## Usage
 
 The API is the same on all this platforms ✔️
@@ -21,11 +24,17 @@ extname({ path: "App.js", leadingPeriod: true }); // .js
 extname({ path: "mod.ts", leadingPeriod: false }); // ts
 ```
 
+> If you only support Deno you should use
+> [std/path#extname](https://deno.land/std/path#extname) instead.
+
 ### [Node.js 🐢🚀](https://npmjs.com/package/@ultirequiem/file-extension)
 
 ```javascript
 import { extname } from "@ultirequiem/file-extension";
 ```
+
+> If you only support Node.js you should use
+> [path#extname](https://nodejs.org/api/path.html#pathextnamepath) instead.
 
 ### [Browser 🌐](https://developer.mozilla.org/en-US/docs/Glossary/Browser)
 
