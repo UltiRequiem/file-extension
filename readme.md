@@ -5,8 +5,7 @@
 
 Get the extension of a file.
 
-> Ported from [Browserify](Ported from
-> https://github.com/browserify/path-browserify) ❤
+> Ported from [Browserify](https://github.com/browserify/path-browserify) ❤
 
 ## Usage
 
