@@ -16,8 +16,15 @@ Deno.test("extname", () => {
   assertEquals(extname({ path: "App.js", leadingPeriod: true }), ".js");
 
   assertThrows(() => {
-    extname({ path: "App", leadingPeriod: false });
+    extname({ path: "/", leadingPeriod: false });
+  });
+
+  assertThrows(() => {
     extname({ path: "tests/", leadingPeriod: false });
+  });
+
+  assertThrows(() => {
+    extname({ path: "App", leadingPeriod: false });
   });
 
   assertEquals(extname({ path: "data.gz.arg", leadingPeriod: true }), ".arg");
