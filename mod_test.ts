@@ -7,6 +7,9 @@ import { _parsePath, extname } from "./mod.ts";
 
 Deno.test("extname", () => {
   assertEquals(extname("test.py"), ".py");
+  assertEquals(extname("main/main.go"), ".go");
+
+  assertEquals(extname("../add_params/mod.ts"), ".ts");
 
   assertEquals(extname({ path: "mod.ts", leadingPeriod: false }), "ts");
 
@@ -14,6 +17,7 @@ Deno.test("extname", () => {
 
   assertThrows(() => {
     extname({ path: "App", leadingPeriod: false });
+    extname({ path: "tests/", leadingPeriod: false });
   });
 
   assertEquals(extname({ path: "data.gz.arg", leadingPeriod: true }), ".arg");
