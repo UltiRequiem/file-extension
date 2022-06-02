@@ -13,9 +13,15 @@ export interface Config {
  * @private
  */
 export function _parsePath(path: Config | string): Config {
-  const isSimplePath = typeof path === "string";
+  if (typeof path === "string") {
+    return { leadingPeriod: true, path };
+  }
 
-  return isSimplePath ? { path, leadingPeriod: true } : path;
+  if (path.hasOwnProperty("path")) {
+    return path;
+  }
+
+  throw new TypeError("Invalid path config.");
 }
 
 /**

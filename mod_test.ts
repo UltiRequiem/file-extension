@@ -40,4 +40,19 @@ Deno.test("_parsePath", () => {
     path: "hey.txt",
     leadingPeriod: false,
   });
+
+  assertThrows(() => {
+    //@ts-ignore: Should throw
+    _parsePath(34);
+  });
+
+  assertThrows(() => {
+    //@ts-ignore: Should throw
+    _parsePath({});
+  });
+
+  assertThrows(() => {
+    //@ts-ignore: Should throw
+    _parsePath({ leadingPeriod: false });
+  });
 });
