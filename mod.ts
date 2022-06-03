@@ -17,7 +17,7 @@ export function _parsePath(path: Config | string): Config {
     return { leadingPeriod: true, path };
   }
 
-  if (path.hasOwnProperty("path")) {
+  if (Object.prototype.hasOwnProperty.call(path, "path")) {
     return path;
   }
 
