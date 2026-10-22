@@ -1,11 +1,11 @@
 # Get File Extension
 
+Get the extension of a file.
+
 [![npm](https://img.shields.io/npm/v/@ultirequiem/file-extension?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/file-extension)
 [![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/file-extension?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/file-extension)
 [![CI](https://github.com/UltiRequiem/file-extension/actions/workflows/ci.yaml/badge.svg)](https://github.com/UltiRequiem/file-extension/actions/workflows/ci.yaml)
 [![codecov](https://codecov.io/gh/UltiRequiem/file-extension/graph/badge.svg)](https://codecov.io/gh/UltiRequiem/file-extension)
-
-Get the extension of a file.
 
 > Ported from [Browserify](https://github.com/browserify/path-browserify) ❤
 

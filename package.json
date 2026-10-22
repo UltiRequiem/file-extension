@@ -1,7 +1,7 @@
 {
   "name": "@ultirequiem/file-extension",
   "version": "0.0.0-development",
-  "description": "Get the file extension of a file.",
+  "description": "Get the extension of a file path.",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,8 +18,11 @@
     "node": ">=20"
   },
   "keywords": [
+    "file",
     "extension",
-    "file"
+    "path",
+    "esm",
+    "typescript"
   ],
   "license": "MIT",
   "homepage": "https://file-extension.js.org",
