@@ -1,6 +1,6 @@
 # Get File Extension
 
-Get the extension of a file.
+Get the extension of a file path.
 
 [![npm](https://img.shields.io/npm/v/@ultirequiem/file-extension?logo=npm&color=cb3837)](https://www.npmjs.com/package/@ultirequiem/file-extension)
 [![npm downloads](https://img.shields.io/npm/dm/@ultirequiem/file-extension?color=cb3837)](https://www.npmjs.com/package/@ultirequiem/file-extension)
